@@ -33,7 +33,7 @@ document.querySelector(".New").onclick = ()=>{
     let tme = setTimeout(()=>{
         quote(api_url)
     },300)
-    tme()
+    
 }
 function activate(){
     let cons = 60;
