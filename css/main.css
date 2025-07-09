@@ -13,12 +13,12 @@
     font-weight: 800;
 }
 body{
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--background);
-
+    overflow: hidden;
 }
 :root{
     --main_color: rgb(255, 117, 234);
@@ -33,7 +33,6 @@ i{
     color: var(--main_color);
 }
 button{
-    cursor: pointer;
     font-weight: 600;
 }
 main{
@@ -133,7 +132,7 @@ main section .ranges span:nth-child(2){
 }
 main section .range{
     width: 100%;
-    -webkit-appearance: none;
+    appearance: none;
     height: 2px;
     z-index: 3;
 }
