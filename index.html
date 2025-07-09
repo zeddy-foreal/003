@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="static/ST_brand/icon.png">
+    <link rel="stylesheet" href="Font_Awesome/fontawesome.min.css">
+    <link rel="stylesheet" href="Font_Awesome/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="static/Animation_&_font/index.css">
+</head>
+<body>
+<section id="ani_container" style="z-index: 5;">
+        <header id="ani_pic"></header>
+        <div class="ani_loading">
+            <li id="ani_l"><span></span></li>
+            <li id="ani_l"><span></span></li>
+            <li id="ani_l"><span></span></li>
+            <li id="ani_l"><span></span></li>
+            <li id="ani_l"><span></span></li>
+        </div>
+</section>
+    <main>
+        <header>Password Generator</header>
+        <div class="password_container">
+            <p class="password"></p>
+            <button class="copy"><i class="fa-regular fa-copy"></i></button>
+        </div>
+        <section>
+            <div>
+                <p>password length</p>
+                <p class="num">15</p>
+            </div>
+            <div class="ranges">
+                <input type="range" class="range" min="0" max="100" minlength="1" maxlength="3" value="15">
+                <span></span>
+                <span class="progress"></span>
+            </div>
+            <div class="boxes">
+                
+                <div>
+                    <input type="checkbox" class="box uppercase">
+                    <p>include uppercase letters</p>
+                </div>
+                <div>
+                    <input type="checkbox" class="box lowercase">
+                    <p>include lowercase letters</p>
+                </div>
+                <div>
+                    <input type="checkbox" class="box numbers">
+                    <p>include numbers</p>
+                </div>
+                <div>
+                    <input type="checkbox" class="box symbols">
+                    <p>include symbols</p>
+                </div>
+            </div>
+            <button class="gen">Generate <i class="fa-solid fa-caret-right"></i></button>
+        </section>
+    </main>
+    <script src="javascript/main.js"></script>
+</body>
+</html>

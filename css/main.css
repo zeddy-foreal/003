@@ -1,0 +1,187 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: monospace;
+    font-size: var(--normal_size);
+    color: var(--text_color);
+    background-color: transparent;
+    transition: 0.3s;
+    font-weight: 800;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+
+}
+:root{
+    --main_color: rgb(255, 117, 234);
+    --text_color: #b9b9b9;
+    --background: #181818;
+    --background2:#272727;
+    --normal_size: 1.1rem;
+    --big_size:2rem;
+    --small_size:0.8rem;
+}
+i{
+    color: var(--main_color);
+}
+button{
+    cursor: pointer;
+    font-weight: 600;
+}
+main{
+    width: 360px;
+    aspect-ratio: 7/8;
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: space-evenly;
+    grid-template-rows: 8% 15% 75%;
+    align-content: space-evenly;
+    gap: 5px;
+}
+main header{
+    text-align: center;
+    color: var(--main_color);
+    font-weight: 600;
+}
+main div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .password_container, main section{
+    background-color: var(--background2);
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+main .password{
+    width: 85%;
+    color:#b9b9b966;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+main .boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+main .boxes div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+}
+main .boxes div p{
+    font-size: var(--small_size);
+}
+main section .gen{
+    background-color: var(--main_color);
+    color: var(--background2);
+    padding: 15px;
+
+}
+main section .num{
+    color: var(--main_color);
+
+}
+main section .gen i {
+    color: var(--background2);
+    transform: translateY(0.5px);
+
+}
+main section .gen:hover i{
+    transform: translateY(0.5px) translateX(3px);
+}
+main section .ranges{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+main section .ranges span{
+    position: absolute;
+    left: 0;
+    width: 15%;
+    background-color: var(--main_color);
+    height: 2px;
+    z-index: 2;
+    transition:0s
+}
+main section .ranges span:nth-child(2){
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+}
+main section .range{
+    width: 100%;
+    -webkit-appearance: none;
+    height: 2px;
+    z-index: 3;
+}
+main section .range::-webkit-slider-thumb{
+    appearance: none;
+    width: 15px;
+    aspect-ratio: 1;
+    background-color: var(--text_color);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 4;
+}
+main section .range::-webkit-slider-thumb:hover{
+    background-color: var(--main_color);
+}
+main section .box{
+    appearance: none;
+    height: 80%;
+    aspect-ratio: 1/1;
+    background-color: var(--background2);
+    border: 1.5px solid var(--text_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+main section .box:checked{
+    border-color: var(--main_color);
+    background-color: var(--main_color);
+}
+
+@media (max-width:360px) {
+    main{
+        width: 300px;
+    }
+    :root{
+        --normal_size: 1rem;
+        --big_size: 1.5;
+        --small_size: 0.6rem;
+    
+    }
+    main section .gen{
+        padding: 11px;
+    }
+    main section .box{
+        height: 70%;
+    }
+    
+}
